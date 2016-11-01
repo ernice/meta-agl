@@ -10,5 +10,5 @@ PACKAGES = "\
 ALLOW_EMPTY_${PN} = "1"
 
 RDEPENDS_${PN} += "\
-    hvacplugin \
+    ${@bb.utils.contains('DISTRO_FEATURES', 'AGL_DEMO', 'hvacplugin', '', d)} \
     "
