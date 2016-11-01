@@ -1,0 +1,13 @@
+diff --git a/xen/arch/arm/Rules.mk b/xen/arch/arm/Rules.mk
+index b31770c..2363bef 100644
+--- a/xen/arch/arm/Rules.mk
++++ b/xen/arch/arm/Rules.mk
+@@ -21,7 +21,7 @@ arm := y
+ 
+ ifeq ($(TARGET_SUBARCH),arm32)
+ # Prevent floating-point variables from creeping into Xen.
+-CFLAGS += -msoft-float
++
+ CFLAGS += -mcpu=cortex-a15
+ arm32 := y
+ arm64 := n
